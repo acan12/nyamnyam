@@ -14,6 +14,7 @@ ksp = "1.9.10-1.0.13"
 room = "2.6.1"
 hilt = "2.51.1"
 hilt-compiler = "2.51.1"
+coconutMvvm = "1.0.0-alpha4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -37,6 +38,7 @@ room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt"}
 dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt-compiler"}
+coconut-mvvm = { group = "com.github.acan12", name = "coconut-mvvm", version.ref = "coconutMvvm" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

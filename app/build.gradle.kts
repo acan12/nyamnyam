@@ -95,6 +95,9 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.appcompat)
 
+    // core
+    implementation(libs.coconut.mvvm)
+
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
@@ -108,4 +111,5 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
 }
