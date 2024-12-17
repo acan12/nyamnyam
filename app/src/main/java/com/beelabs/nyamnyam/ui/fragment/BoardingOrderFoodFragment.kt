@@ -1,4 +1,7 @@
 package com.beelabs.nyamnyam.ui.fragment
 
-class BoardingOrderFoodFragment {
+import app.beelabs.coconut.mvvm.base.BaseFragment
+
+class BoardingOrderFoodFragment : BaseFragment() {
+
 }

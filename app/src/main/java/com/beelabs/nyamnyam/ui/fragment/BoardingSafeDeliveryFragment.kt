@@ -1,4 +1,7 @@
 package com.beelabs.nyamnyam.ui.fragment
 
-class BoardingSafeDeliveryFragment {
+import app.beelabs.coconut.mvvm.base.BaseFragment
+
+class BoardingSafeDeliveryFragment : BaseFragment(){
+
 }
