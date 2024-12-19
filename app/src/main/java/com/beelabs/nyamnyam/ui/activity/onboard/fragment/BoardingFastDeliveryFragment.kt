@@ -1,4 +1,4 @@
-package com.beelabs.nyamnyam.ui.fragment
+package com.beelabs.nyamnyam.ui.activity.onboard.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

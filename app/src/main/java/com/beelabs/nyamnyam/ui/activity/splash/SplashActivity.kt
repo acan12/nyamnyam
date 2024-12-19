@@ -1,4 +1,4 @@
-package com.beelabs.nyamnyam.ui.activity
+package com.beelabs.nyamnyam.ui.activity.splash
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
