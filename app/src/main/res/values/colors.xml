@@ -12,5 +12,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="orange">#F26333</color>
+
+    <!--  gray colors  -->
+    <color name="gray">#A7AAB2</color>
+
+    <!--  orange colors  -->
+    <color name="orange">#F26333</color>    
+    <color name="orange_dark">#F55053</color>
 </resources>

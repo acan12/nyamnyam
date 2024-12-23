@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_onboarding_order_food">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae tincidunt semper</string>
+    <string name="text_onboarding_fast_delivery">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae tincidunt semper</string>
+    <string name="text_onboarding_safe_delivery">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae tincidunt semper</string>
+</resources>
