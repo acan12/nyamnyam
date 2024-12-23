@@ -102,6 +102,7 @@ dependencies {
 
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
+    implementation(libs.androidx.viewpager2)
     ksp(libs.room.compiler)
     implementation(libs.dagger.hilt)
     ksp(libs.dagger.hilt.compiler)

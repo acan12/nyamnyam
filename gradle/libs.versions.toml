@@ -17,6 +17,7 @@ hilt-compiler = "2.51.1"
 coconutMvvm = "1.0.0-alpha4"
 jetpackNavigation = "2.8.4"
 tbuonomoDotsindicator = "5.1.0"
+viewpager2 = "1.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -46,6 +47,7 @@ tbuonomo-dotsindicator = { group = "com.tbuonomo", name = "dotsindicator", versi
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-testing-navigation = { group = "androidx.navigation", name = "navigation-testing", version.ref = "jetpackNavigation" }
+androidx-viewpager2 = { group = "androidx.viewpager2", name = "viewpager2", version.ref = "viewpager2" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
