@@ -98,6 +98,7 @@ dependencies {
 
     // core
     implementation(libs.coconut.mvvm)
+    implementation(libs.tbuonomo.dotsindicator)
 
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)

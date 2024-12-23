@@ -16,6 +16,7 @@ hilt = "2.51.1"
 hilt-compiler = "2.51.1"
 coconutMvvm = "1.0.0-alpha4"
 jetpackNavigation = "2.8.4"
+tbuonomoDotsindicator = "5.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -39,6 +40,7 @@ dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref 
 dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt-compiler"}
 coconut-mvvm = { group = "com.github.acan12", name = "coconut-mvvm", version.ref = "coconutMvvm" }
 jetpack-navigation = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "jetpackNavigation" }
+tbuonomo-dotsindicator = { group = "com.tbuonomo", name = "dotsindicator", version.ref = "tbuonomoDotsindicator"}
 
 # testing
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }

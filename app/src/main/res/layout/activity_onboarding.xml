@@ -13,4 +13,22 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph_onboarding" />
 
+    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+        android:id="@+id/worm_dots_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        app:dotsColor="@color/color_green"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="10dp"
+        app:dotsSpacing="6dp"
+        app:dotsStrokeColor="@color/color_red"
+        app:dotsStrokeWidth="2dp"
+        app:dotsWidthFactor="2.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:progressMode="true"
+        app:selectedDotColor="@color/color_blue" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
