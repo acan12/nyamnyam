@@ -1,6 +1,6 @@
 [versions]
 agp = "8.5.2"
-kotlin = "1.9.0"
+kotlin = "2.1.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -10,11 +10,12 @@ activityCompose = "1.9.2"
 composeBom = "2024.04.01"
 appcompat = "1.7.0"
 constraintLayout = "2.2.0"
-ksp = "1.9.10-1.0.13"
+ksp = "2.0.0-1.0.22"
 room = "2.6.1"
 hilt = "2.51.1"
 hilt-compiler = "2.51.1"
 coconutMvvm = "1.0.0-alpha4"
+#coconut2 = "v1.0.2"
 jetpackNavigation = "2.8.4"
 tbuonomoDotsindicator = "5.1.0"
 viewpager2 = "1.1.0"
@@ -33,15 +34,16 @@ androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-androidx-constraint-layout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintLayout"}
+androidx-constraint-layout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintLayout" }
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
-dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt"}
-dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt-compiler"}
+dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt-compiler" }
 coconut-mvvm = { group = "com.github.acan12", name = "coconut-mvvm", version.ref = "coconutMvvm" }
+#coconut2 = { group = "com.github.acan12", name = "coconut2", version.ref = "coconut2" }
 jetpack-navigation = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "jetpackNavigation" }
-tbuonomo-dotsindicator = { group = "com.tbuonomo", name = "dotsindicator", version.ref = "tbuonomoDotsindicator"}
+tbuonomo-dotsindicator = { group = "com.tbuonomo", name = "dotsindicator", version.ref = "tbuonomoDotsindicator" }
 
 # testing
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
