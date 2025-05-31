@@ -15,7 +15,6 @@ room = "2.6.1"
 hilt = "2.51.1"
 hilt-compiler = "2.51.1"
 coconutMvvm = "1.0.0-alpha4"
-coconut2 = "v1.0.2"
 jetpackNavigation = "2.8.4"
 tbuonomoDotsindicator = "5.1.0"
 viewpager2 = "1.1.0"
@@ -45,7 +44,6 @@ coconut-mvvm = { group = "com.github.acan12", name = "coconut-mvvm", version.ref
 coconut2 = { group = "com.github.acan12", name = "coconut2", version.ref = "coconut2" }
 jetpack-navigation = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "jetpackNavigation" }
 tbuonomo-dotsindicator = { group = "com.tbuonomo", name = "dotsindicator", version.ref = "tbuonomoDotsindicator"}
-coconut2 = { group = "com.github.acan12", name = "coconut2", version.ref = "coconut2"}
 
 # testing
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }

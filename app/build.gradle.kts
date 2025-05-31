@@ -95,7 +95,7 @@ dependencies {
     implementation(libs.jetpack.navigation)
 
     // core
-    implementation(libs.coconut.mvvm)
+    implementation(libs.coconut2)
     implementation(libs.tbuonomo.dotsindicator)
 
     implementation(libs.room.runtime)
