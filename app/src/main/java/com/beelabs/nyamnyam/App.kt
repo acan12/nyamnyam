@@ -1,13 +1,13 @@
 package com.beelabs.nyamnyam
 
-import app.beelabs.coconut.mvvm.base.BaseApp
-import app.beelabs.coconut.mvvm.base.service.WifiConnectionService
+import app.coconut2.coconut2_mvvm.base.BaseApp
+import app.coconut2.coconut2_mvvm.network.WifiConnectionService
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
 class App : BaseApp() {
     override fun onCreate() {
         super.onCreate()
-        WifiConnectionService().initializeConnection(applicationContext)
+        WifiConnectionService().setupConnection(applicationContext)
     }
 }

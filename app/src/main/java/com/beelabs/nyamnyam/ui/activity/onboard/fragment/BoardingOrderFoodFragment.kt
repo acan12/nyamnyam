@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import app.beelabs.coconut.mvvm.base.BaseFragment
+import androidx.fragment.app.Fragment
 import com.beelabs.nyamnyam.databinding.FragmentBoardingOrderFoodBinding
 
-class BoardingOrderFoodFragment : BaseFragment() {
+class BoardingOrderFoodFragment : Fragment() {
     private lateinit var binding: FragmentBoardingOrderFoodBinding
 
     override fun onCreateView(
