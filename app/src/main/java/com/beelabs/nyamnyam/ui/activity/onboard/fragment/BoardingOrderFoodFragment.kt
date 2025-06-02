@@ -1,21 +1,18 @@
 package com.beelabs.nyamnyam.ui.activity.onboard.fragment
 
-import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import android.widget.Toast
+import app.coconut2.coconut2_mvvm.base.BaseFragment
 import com.beelabs.nyamnyam.databinding.FragmentBoardingOrderFoodBinding
 
-class BoardingOrderFoodFragment : Fragment() {
-    private lateinit var binding: FragmentBoardingOrderFoodBinding
+class BoardingOrderFoodFragment : BaseFragment<FragmentBoardingOrderFoodBinding>() {
+    override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentBoardingOrderFoodBinding
+        get() = FragmentBoardingOrderFoodBinding::inflate
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentBoardingOrderFoodBinding.inflate(inflater, container, false)
-        return binding.root
+    override fun setup() {
+        Toast.makeText(requireContext(), "Masuk Setup #1", Toast.LENGTH_LONG).show()
     }
+
+
 }

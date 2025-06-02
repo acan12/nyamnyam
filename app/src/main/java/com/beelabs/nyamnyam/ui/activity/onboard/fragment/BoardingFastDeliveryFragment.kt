@@ -1,22 +1,19 @@
 package com.beelabs.nyamnyam.ui.activity.onboard.fragment
 
-import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import android.widget.Toast
+import app.coconut2.coconut2_mvvm.base.BaseFragment
 import com.beelabs.nyamnyam.databinding.FragmentBoardingFastDeliveryBinding
 
-class BoardingFastDeliveryFragment : Fragment() {
-    private lateinit var binding: FragmentBoardingFastDeliveryBinding
+class BoardingFastDeliveryFragment :
+    BaseFragment<FragmentBoardingFastDeliveryBinding>() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentBoardingFastDeliveryBinding.inflate(inflater, container, false)
+    override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentBoardingFastDeliveryBinding
+        get() = FragmentBoardingFastDeliveryBinding::inflate
 
-        return binding.root
+    override fun setup() {
+        binding.logo
+        Toast.makeText(requireContext(), "Masuk Setup #2", Toast.LENGTH_LONG).show()
     }
 }

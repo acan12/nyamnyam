@@ -4,19 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import app.coconut2.coconut2_mvvm.base.BaseFragment
 import com.beelabs.nyamnyam.databinding.FragmentBoardingSafeDeliveryBinding
 
-class BoardingSafeDeliveryFragment : Fragment() {
-    private lateinit var binding: FragmentBoardingSafeDeliveryBinding
+class BoardingSafeDeliveryFragment : BaseFragment<FragmentBoardingSafeDeliveryBinding>() {
+    override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentBoardingSafeDeliveryBinding
+        get() = FragmentBoardingSafeDeliveryBinding::inflate
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentBoardingSafeDeliveryBinding.inflate(inflater, container, false)
-
-        return binding.root
+    override fun setup() {
+        Toast.makeText(requireContext(), "Masuk Setup #3", Toast.LENGTH_LONG).show()
     }
 }
