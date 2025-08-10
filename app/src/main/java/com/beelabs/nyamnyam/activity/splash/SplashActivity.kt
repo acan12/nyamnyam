@@ -1,11 +1,11 @@
-package com.beelabs.nyamnyam.ui.activity.splash
+package com.beelabs.nyamnyam.activity.splash
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.beelabs.nyamnyam.databinding.ActivitySplashBinding
-import com.beelabs.nyamnyam.ui.activity.onboard.OnBoardingActivity
+import com.beelabs.nyamnyam.activity.onboard.OnBoardingActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

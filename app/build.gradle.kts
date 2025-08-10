@@ -93,6 +93,7 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.appcompat)
     implementation(libs.jetpack.navigation)
+    implementation(libs.android.play.api.phone)
 
     // core
     implementation(libs.coconut2)
