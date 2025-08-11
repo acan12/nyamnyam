@@ -1,11 +1,5 @@
 package com.beelabs.nyamnyam.activity.onboard
 
-//import app.beelabs.coconut.mvvm.base.BaseActivity
-
-import android.annotation.SuppressLint
-import android.content.IntentFilter
-import android.os.Build.VERSION
-import android.os.Build.VERSION_CODES
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -24,24 +18,21 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        startSmsRetriever()
-
 
         val adapter = BoardingAdapter(this)
         binding.onboardingViewPager2.adapter = adapter
         binding.wormDotsIndicator.attachTo(binding.onboardingViewPager2)
+
+        setup()
     }
 
-
-    private fun startSmsRetriever() {
-        val client = SmsRetriever.getClient(this)
-        val task = client.startSmsRetriever()
-        task.apply {
-            addOnSuccessListener {
-                Log.d("SMS", "start launch sms receiver")
+    private fun setup() {
+        with(binding) {
+            btnGetStarted.setOnClickListener {
+                Toast.makeText(this@OnBoardingActivity, "Get Started", Toast.LENGTH_LONG).show()
             }
-            addOnFailureListener {
-                Log.d("SMS", "Stop failure")
+            btnLogin.setOnClickListener {
+                Toast.makeText(this@OnBoardingActivity, "Login", Toast.LENGTH_LONG).show()
             }
         }
     }

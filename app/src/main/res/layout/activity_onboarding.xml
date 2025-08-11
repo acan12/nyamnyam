@@ -15,7 +15,7 @@
         android:id="@+id/worm_dots_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="150dp"
         app:dotsColor="@color/gray"
         app:dotsCornerRadius="8dp"
         app:dotsSize="10dp"
@@ -26,5 +26,33 @@
         app:layout_constraintRight_toRightOf="parent"
         app:progressMode="true"
         app:selectedDotColor="@color/orange_dark" />
+
+    <Button
+        android:id="@+id/btn_get_started"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Get Started"
+        android:textAllCaps="false"
+        android:textColor="@color/orange"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/rounded_orange_stroke_button"
+        app:layout_constraintRight_toLeftOf="@+id/btn_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/rounded_orange_fill_button"
+        app:layout_constraintLeft_toRightOf="@+id/btn_get_started"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
