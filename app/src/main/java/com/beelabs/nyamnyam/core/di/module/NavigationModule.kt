@@ -1,4 +1,4 @@
-package com.beelabs.nyamnyam.di.module
+package com.beelabs.nyamnyam.core.di.module
 
 import dagger.Module
 import dagger.hilt.InstallIn

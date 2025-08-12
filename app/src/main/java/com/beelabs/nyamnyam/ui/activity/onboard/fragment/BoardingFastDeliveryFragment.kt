@@ -1,4 +1,4 @@
-package com.beelabs.nyamnyam.activity.onboard.fragment
+package com.beelabs.nyamnyam.ui.activity.onboard.fragment
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

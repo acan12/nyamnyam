@@ -1,11 +1,11 @@
-package com.beelabs.nyamnyam.adapter
+package com.beelabs.nyamnyam.ui.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.beelabs.nyamnyam.activity.onboard.fragment.BoardingFastDeliveryFragment
-import com.beelabs.nyamnyam.activity.onboard.fragment.BoardingOrderFoodFragment
-import com.beelabs.nyamnyam.activity.onboard.fragment.BoardingSafeDeliveryFragment
+import com.beelabs.nyamnyam.ui.activity.onboard.fragment.BoardingFastDeliveryFragment
+import com.beelabs.nyamnyam.ui.activity.onboard.fragment.BoardingOrderFoodFragment
+import com.beelabs.nyamnyam.ui.activity.onboard.fragment.BoardingSafeDeliveryFragment
 
 class BoardingAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
     override fun getItemCount(): Int {
