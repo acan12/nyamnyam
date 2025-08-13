@@ -19,4 +19,9 @@
     <!--  orange colors  -->
     <color name="orange">#F26333</color>    
     <color name="orange_dark">#F55053</color>
+
+    <!--  basic colors  -->
+    <color name="black_010F07">#010F07</color>
+    <color name="gray_868686">#868686</color>
+
 </resources>

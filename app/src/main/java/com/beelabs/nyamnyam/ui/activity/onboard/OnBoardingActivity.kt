@@ -1,12 +1,10 @@
 package com.beelabs.nyamnyam.ui.activity.onboard
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import app.coconut2.coconut2_mvvm.base.BaseActivity
-import com.beelabs.nyamnyam.ui.adapter.BoardingAdapter
 import com.beelabs.nyamnyam.databinding.ActivityOnboardingBinding
-import com.google.android.gms.auth.api.phone.SmsRetriever
+import com.beelabs.nyamnyam.ui.adapter.BoardingAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
