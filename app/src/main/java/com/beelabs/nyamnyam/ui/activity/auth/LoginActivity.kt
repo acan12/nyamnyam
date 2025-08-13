@@ -6,4 +6,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class LoginActivity : BaseActivity<ActivityOnboardingBinding>() {
+    override fun inflateBinding(): ActivityOnboardingBinding {
+        TODO("Not yet implemented")
+    }
 }
