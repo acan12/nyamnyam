@@ -6,8 +6,8 @@ junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
-activityCompose = "1.9.2"
-composeBom = "2024.04.01"
+#activityCompose = "1.9.2"
+#composeBom = "2024.04.01"
 appcompat = "1.7.0"
 constraintLayout = "2.2.0"
 ksp = "2.0.0-1.0.22"
@@ -15,7 +15,15 @@ room = "2.6.1"
 hilt = "2.51.1"
 hilt-compiler = "2.51.1"
 coconutMvvm = "1.0.0-alpha4"
-jetpackNavigation = "2.8.4"
+
+retrofit = "2.11.0"
+okhttpBom = "4.12.0"
+coroutines = "1.10.1"
+lifecycle = "2.8.7"
+rxAndroid = "3.0.2"
+adapterRxjava3 = "2.11.0"
+
+jetpackNavigation = "2.9.3"
 tbuonomoDotsindicator = "5.1.0"
 viewpager2 = "1.1.0"
 coconut2 = "v1.0.4"
@@ -27,25 +35,39 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
-androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
-androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+#androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+#androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-androidx-constraint-layout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintLayout"}
+androidx-constraint-layout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintLayout" }
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
-dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt"}
-dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt-compiler"}
-coconut-mvvm = { group = "com.github.acan12", name = "coconut-mvvm", version.ref = "coconutMvvm" }
+dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt-compiler" }
 coconut2 = { group = "com.github.acan12", name = "coconut2", version.ref = "coconut2" }
-jetpack-navigation = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "jetpackNavigation" }
-tbuonomo-dotsindicator = { group = "com.tbuonomo", name = "dotsindicator", version.ref = "tbuonomoDotsindicator"}
-android-play-api-phone =  { group = "com.google.android.gms", name = "play-services-auth", version.ref = "playAuthApiPhone"}
+
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+okhttp-bom = { group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref = "okhttpBom" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp" }
+okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor" }
+retrofit-converter-jackson = { group = "com.squareup.retrofit2", name = "converter-jackson", version.ref = "retrofit" }
+retrofit-adapter-rxjava3 = { group = "com.squareup.retrofit2", name = "adapter-rxjava3", version.ref = "adapterRxjava3" }
+caroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+caroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+rx-android3 = { group = "io.reactivex.rxjava3", name = "rxandroid", version.ref = "rxAndroid" }
+lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle" }
+
+
+navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "jetpackNavigation" }
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "jetpackNavigation" }
+tbuonomo-dotsindicator = { group = "com.tbuonomo", name = "dotsindicator", version.ref = "tbuonomoDotsindicator" }
+android-play-api-phone = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "playAuthApiPhone" }
 
 # testing
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
@@ -58,6 +80,7 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "jetpackNavigation" }
 
 
 

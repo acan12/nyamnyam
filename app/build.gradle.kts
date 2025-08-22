@@ -65,9 +65,9 @@ android {
         jvmTarget = "1.8"
     }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
-    }
+//    composeOptions {
+//        kotlinCompilerExtensionVersion = "1.5.1"
+//    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -85,14 +85,15 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.constraint.layout)
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
+//    implementation(libs.androidx.activity.compose)
+//    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.appcompat)
-    implementation(libs.jetpack.navigation)
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
     implementation(libs.android.play.api.phone)
 
     // core
@@ -106,14 +107,32 @@ dependencies {
     implementation(libs.dagger.hilt)
     ksp(libs.dagger.hilt.compiler)
 
+    // caroutines
+    implementation(libs.caroutines)
+    implementation(libs.caroutines.core)
+    // rx-android3
+    implementation(libs.rx.android3)
+    implementation(platform(libs.okhttp.bom))
+    // okhttp
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging)
+    // retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.jackson)
+    implementation(libs.retrofit.adapter.rxjava3)
+    // viewmodel livedata
+    implementation(libs.lifecycle.viewmodel)
+    implementation(libs.lifecycle.livedata)
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
+//    androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
 
     androidTestImplementation(libs.androidx.testing.navigation)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
 }
