@@ -1,6 +1,6 @@
 package com.pigeon.demo.domain.mapper
 
-import com.pigeon.demo.data.remote.source.response.DataResponse
+import com.beelabs.nyamnyam.data.sources.remote.response.DataResponse
 
 
 fun DataResponse.toHeadlineData(): HeadlineData =

@@ -1,7 +1,7 @@
 package com.beelabs.nyamnyam.core.di.module
 
-import com.pigeon.demo.data.remote.repo.HeadlineRepository
-import com.pigeon.demo.data.remote.source.Api
+import com.beelabs.nyamnyam.data.sources.remote.repo.HeadlineRepository
+import com.beelabs.nyamnyam.data.sources.remote.Api
 import com.pigeon.demo.domain.repo.headline.IHeadlineRepository
 import dagger.Module
 import dagger.Provides

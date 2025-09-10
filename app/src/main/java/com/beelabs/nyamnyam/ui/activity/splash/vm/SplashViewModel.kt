@@ -1,4 +1,4 @@
-package com.beelabs.nyamnyam.vm
+package com.beelabs.nyamnyam.ui.activity.splash.vm
 
 import androidx.lifecycle.ViewModel
 import com.beelabs.nyamnyam.ui.navigation.Navigator

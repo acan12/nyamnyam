@@ -1,7 +1,7 @@
-package com.pigeon.demo.data.remote.repo
+package com.beelabs.nyamnyam.data.sources.remote.repo
 
 import app.coconut2.coconut2_mvvm.base.BaseRepository
-import com.pigeon.demo.data.remote.source.Api
+import com.beelabs.nyamnyam.data.sources.remote.Api
 import com.pigeon.demo.domain.repo.headline.IHeadlineRepository
 import javax.inject.Inject
 

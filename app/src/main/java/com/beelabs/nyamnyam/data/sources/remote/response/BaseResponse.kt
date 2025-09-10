@@ -1,4 +1,4 @@
-package com.pigeon.demo.data.remote.source.response
+package com.beelabs.nyamnyam.data.sources.remote.response
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 
