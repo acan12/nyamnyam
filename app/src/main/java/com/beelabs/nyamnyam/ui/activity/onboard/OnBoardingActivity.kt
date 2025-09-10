@@ -1,9 +1,11 @@
 package com.beelabs.nyamnyam.ui.activity.onboard
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import app.coconut2.coconut2_mvvm.base.BaseActivity
 import com.beelabs.nyamnyam.databinding.ActivityOnboardingBinding
+import com.beelabs.nyamnyam.ui.activity.auth.LoginActivity
 import com.beelabs.nyamnyam.ui.adapter.BoardingAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -30,7 +32,11 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
                 Toast.makeText(this@OnBoardingActivity, "Get Started", Toast.LENGTH_LONG).show()
             }
             btnLogin.setOnClickListener {
-                Toast.makeText(this@OnBoardingActivity, "Login", Toast.LENGTH_LONG).show()
+                val intent = Intent(
+                    this@OnBoardingActivity,
+                    LoginActivity::class.java
+                )
+                startActivity(intent)
             }
         }
     }

@@ -22,12 +22,15 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <activity
             android:name=".ui.activity.onboard.OnBoardingActivity"
             android:exported="true"
+            android:theme="@style/Theme.NyamNyam" />
+
+        <activity android:name=".ui.activity.auth.LoginActivity"
+            android:exported="false"
             android:theme="@style/Theme.NyamNyam" />
 
     </application>

@@ -7,6 +7,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class LoginActivity : BaseActivity<ActivityLoginBinding>() {
+
     override fun inflateBinding(): ActivityLoginBinding =
         ActivityLoginBinding.inflate(layoutInflater)
 
