@@ -23,5 +23,6 @@
     <!--  basic colors  -->
     <color name="black_010F07">#010F07</color>
     <color name="gray_868686">#868686</color>
+    <color name="gray_003D8F">#DEE3E7</color>
 
 </resources>

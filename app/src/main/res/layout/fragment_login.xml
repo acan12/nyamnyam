@@ -42,21 +42,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dimen20sp"
-        android:text="Enter your Phone number or Email for sign in."
         android:layout_marginTop="20dp"
+        android:text="Enter your Phone number or Email for sign in."
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title_login" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="@dimen/dimen20sp"
+        android:background="@drawable/rounded_gray_transparent"
+        android:drawableLeft="@drawable/ic_phone_code"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/inter_24pt_regular"
+        android:hint="Phone Number"
+        android:maxLength="15"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:phoneNumber="true"
+        android:textColorHint="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc_login" />
 
     <Button
         android:id="@+id/btn_demo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Demo"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_orange_fill_button"
+        android:text="Masuk"
         android:textAllCaps="false"
+        android:textColor="@color/color_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
