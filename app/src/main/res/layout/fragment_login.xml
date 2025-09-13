@@ -41,9 +41,10 @@
         android:id="@+id/tv_desc_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen20sp"
+        android:layout_marginHorizontal="@dimen/dimen20sp"
         android:layout_marginTop="20dp"
-        android:text="Enter your Phone number or Email for sign in."
+        android:autoSizeTextType="uniform"
+        android:text="Enter your Phone number to get benefit from us. The food provided in here was special flavour for get customers."
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title_login" />
 
