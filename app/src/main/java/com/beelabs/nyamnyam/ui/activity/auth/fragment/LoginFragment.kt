@@ -2,9 +2,9 @@ package com.beelabs.nyamnyam.ui.activity.auth.fragment
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import app.coconut2.coconut2_mvvm.base.BaseFragment
 import com.beelabs.nyamnyam.databinding.FragmentLoginBinding
+import com.beelabs.nyamnyam.ui.activity.auth.dialog.BottomSheetInputOtp
 
 class LoginFragment : BaseFragment<FragmentLoginBinding>() {
 
@@ -13,7 +13,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
 
     override fun setup() {
         binding.btnDemo.setOnClickListener {
-            Toast.makeText(requireActivity(), "Login Fragment", Toast.LENGTH_LONG).show()
+            BottomSheetInputOtp().show(parentFragmentManager, "")
         }
     }
 }
