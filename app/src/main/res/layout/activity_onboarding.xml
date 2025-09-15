@@ -50,7 +50,7 @@
         android:textColor="@color/white"
         android:layout_marginHorizontal="10dp"
         android:layout_marginBottom="30dp"
-        android:background="@drawable/rounded_orange_fill_button"
+        android:background="@drawable/rounded_orange_solid"
         app:layout_constraintLeft_toRightOf="@+id/btn_get_started"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />

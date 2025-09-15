@@ -109,9 +109,10 @@
         app:layout_constraintTop_toBottomOf="@id/et_input1" />
 
     <Button
+        android:id="@+id/btn_continue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_orange_fill_button"
+        android:background="@drawable/rounded_orange_solid"
         android:fontFamily="@font/inter_24pt_bold"
         android:text="Continue"
         android:textAllCaps="false"

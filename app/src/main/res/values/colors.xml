@@ -24,5 +24,9 @@
     <color name="black_010F07">#010F07</color>
     <color name="gray_868686">#868686</color>
     <color name="gray_003D8F">#DEE3E7</color>
+    <color name="gray_E8EBEE">#E8EBEE</color>
+    <color name="gray_F6F7F8">#F6F7F8</color>
+    <color name="blue_0BB8E4">#0BB8E4</color>
+    <color name="blue_E5F9FE">#E5F9FE</color>
 
 </resources>

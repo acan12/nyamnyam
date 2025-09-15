@@ -16,8 +16,7 @@
         <activity
             android:name=".ui.activity.splash.SplashActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.NyamNyam">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -26,12 +25,14 @@
 
         <activity
             android:name=".ui.activity.onboard.OnBoardingActivity"
-            android:exported="true"
-            android:theme="@style/Theme.NyamNyam" />
+            android:exported="true" />
 
         <activity android:name=".ui.activity.auth.LoginActivity"
-            android:exported="false"
-            android:theme="@style/Theme.NyamNyam" />
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.activity.home.HomeActivity"
+            android:exported="false" />
 
     </application>
 
