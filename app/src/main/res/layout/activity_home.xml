@@ -78,6 +78,30 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_search_box"
+            android:text="All Categories"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter_24pt_bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_search_box"
+            android:text="See All"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/ic_arrow_right"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/orange"
+            android:fontFamily="@font/inter_24pt_bold"
+            android:textSize="18sp" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
