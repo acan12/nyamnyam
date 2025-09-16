@@ -1,8 +1,8 @@
-package com.pigeon.demo.domain.usecase
+package com.beelabs.nyamnyam.domain.usecase
 
 import app.coconut2.coconut2_mvvm.network.ApiState
 import com.beelabs.nyamnyam.data.sources.remote.response.TopHeadlineResponse
-import com.pigeon.demo.domain.repo.headline.IHeadlineRepository
+import com.beelabs.nyamnyam.domain.repo.headline.IHeadlineRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

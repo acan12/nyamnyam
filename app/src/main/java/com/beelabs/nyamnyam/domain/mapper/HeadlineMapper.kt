@@ -1,4 +1,4 @@
-package com.pigeon.demo.domain.mapper
+package com.beelabs.nyamnyam.domain.mapper
 
 import com.beelabs.nyamnyam.data.sources.remote.response.DataResponse
 

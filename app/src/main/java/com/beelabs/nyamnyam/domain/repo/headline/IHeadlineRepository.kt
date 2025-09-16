@@ -1,4 +1,4 @@
-package com.pigeon.demo.domain.repo.headline
+package com.beelabs.nyamnyam.domain.repo.headline
 
 import app.coconut2.coconut2_mvvm.network.ApiState
 import com.beelabs.nyamnyam.data.sources.remote.response.TopHeadlineResponse

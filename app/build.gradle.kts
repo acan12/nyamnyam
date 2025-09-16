@@ -124,6 +124,9 @@ dependencies {
     // viewmodel livedata
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.lifecycle.livedata)
+    // image rendering
+    implementation(libs.glide)
+    implementation(libs.scrollingPageIndicator)
 
 
     testImplementation(libs.junit)
