@@ -22,6 +22,8 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
 
         setupPromoBanner()
         setupProductBanner()
+        setupPopularBanner()
+        setupNearbyBanner()
     }
 
     private fun setupPromoBanner() {
@@ -85,5 +87,69 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
 
         binding.rvProductBanner.layoutManager = layout
         binding.rvProductBanner.adapter = adapter
+    }
+
+    private fun setupPopularBanner() {
+        val layout = LinearLayoutManager(this)
+        layout.orientation = LinearLayoutManager.HORIZONTAL
+
+        val adapter = ProductAdapter(onItemProductOnClick = {
+
+        })
+        adapter.addList(
+            listOf(
+                ProductBanner(
+                    image =
+                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
+                ),
+                ProductBanner(
+                    image =
+                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
+                ),
+                ProductBanner(
+                    image =
+                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
+                ),
+                ProductBanner(
+                    image =
+                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
+                ),
+            )
+        )
+
+        binding.rvPopularBanner.layoutManager = layout
+        binding.rvPopularBanner.adapter = adapter
+    }
+
+    private fun setupNearbyBanner() {
+        val layout = LinearLayoutManager(this)
+        layout.orientation = LinearLayoutManager.HORIZONTAL
+
+        val adapter = ProductAdapter(onItemProductOnClick = {
+
+        })
+        adapter.addList(
+            listOf(
+                ProductBanner(
+                    image =
+                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
+                ),
+                ProductBanner(
+                    image =
+                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
+                ),
+                ProductBanner(
+                    image =
+                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
+                ),
+                ProductBanner(
+                    image =
+                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
+                ),
+            )
+        )
+
+        binding.rvNearbyBanner.layoutManager = layout
+        binding.rvNearbyBanner.adapter = adapter
     }
 }

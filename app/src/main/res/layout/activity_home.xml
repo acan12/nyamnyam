@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -51,89 +52,154 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="11dp"
-        android:background="@color/gray_F6F7F8"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_location_name_value">
+        app:layout_constraintTop_toBottomOf="@id/tv_location_name_value"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-        <EditText
-            android:id="@+id/et_search_box"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_white_solid"
-            android:drawableLeft="@drawable/ic_search"
-            android:drawableRight="@drawable/ic_maps"
-            android:drawablePadding="10dp"
-            android:gravity="center_vertical"
-            android:hint="What do you want"
-            android:padding="10dp"
-            android:textAlignment="gravity"
-            android:textColorHint="@color/gray"
+            android:layout_height="0dp"
+            android:layout_marginTop="11dp"
+            android:background="@color/gray_F6F7F8"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_promo_banner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_search_box" />
+            <EditText
+                android:id="@+id/et_search_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_white_solid"
+                android:drawableLeft="@drawable/ic_search"
+                android:drawableRight="@drawable/ic_maps"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:hint="What do you want"
+                android:padding="10dp"
+                android:textAlignment="gravity"
+                android:textColorHint="@color/gray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
-            android:id="@+id/indicator_of_promo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:spi_dotSelectedColor="@color/orange"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rv_promo_banner" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_promo_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_search_box" />
 
-        <TextView
-            android:id="@+id/tv_title_categories"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/indicator_of_promo"
-            android:text="All Categories"
-            android:layout_marginTop="18dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/inter_24pt_bold"
-            android:textSize="18sp" />
+            <ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
+                android:id="@+id/indicator_of_promo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_promo_banner"
+                app:spi_dotSelectedColor="@color/orange" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/indicator_of_promo"
-            android:text="See All"
-            android:drawablePadding="10dp"
-            android:drawableRight="@drawable/ic_arrow_right"
-            android:layout_marginTop="18dp"
-            android:textColor="@color/orange"
-            android:fontFamily="@font/inter_24pt_bold"
-            android:textSize="18sp" />
+            <!--  all categories      -->
+            <TextView
+                android:id="@+id/tv_title_categories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/inter_24pt_bold"
+                android:text="All Categories"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/indicator_of_promo" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_product_banner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_title_categories" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/inter_24pt_bold"
+                android:text="See All"
+                android:textColor="@color/orange"
+                android:textSize="18sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/indicator_of_promo" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_product_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_categories" />
+
+            <!--  poppular food      -->
+            <TextView
+                android:id="@+id/tv_title_popular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/inter_24pt_bold"
+                android:text="Popular Food"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_product_banner" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/inter_24pt_bold"
+                android:text="See All"
+                android:textColor="@color/orange"
+                android:textSize="18sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_product_banner" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_popular_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_popular" />
+
+            <!--  food nearby   -->
+            <TextView
+                android:id="@+id/tv_title_nearby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/inter_24pt_bold"
+                android:text="Food Nearby"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_popular_banner" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_nearby_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_nearby" />
 
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
