@@ -10,7 +10,6 @@ import com.beelabs.nyamnyam.ui.adapter.ProductAdapter
 import com.beelabs.nyamnyam.ui.adapter.PromoAdapter
 import com.beelabs.nyamnyam.ui.model.ProductBanner
 import com.beelabs.nyamnyam.ui.model.PromoBanner
-import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
 
 class HomeActivity : BaseActivity<ActivityHomeBinding>() {
     override fun inflateBinding() =

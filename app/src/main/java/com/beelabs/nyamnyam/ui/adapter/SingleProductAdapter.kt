@@ -4,22 +4,22 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.beelabs.nyamnyam.databinding.ItemProductBinding
+import com.beelabs.nyamnyam.databinding.ItemSingleProductBinding
 import com.beelabs.nyamnyam.ui.model.ProductBanner
 
-class ProductAdapter(private val onItemProductOnClick: (product: ProductBanner) -> Unit) :
-    RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
+class SingleProductAdapter(private val onItemProductOnClick: (product: ProductBanner) -> Unit) :
+    RecyclerView.Adapter<SingleProductAdapter.SingleProductViewHolder>() {
     private lateinit var items: List<ProductBanner>
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SingleProductViewHolder {
         val itemBinding =
-            ItemProductBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ProductViewHolder(itemBinding)
+            ItemSingleProductBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return SingleProductViewHolder(itemBinding)
     }
 
     override fun getItemCount(): Int = items.size
 
-    override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SingleProductViewHolder, position: Int) {
         holder.bind(items[position], onItemProductOnClick)
     }
 
@@ -29,7 +29,7 @@ class ProductAdapter(private val onItemProductOnClick: (product: ProductBanner) 
         notifyDataSetChanged()
     }
 
-    class ProductViewHolder(private val itemBinding: ItemProductBinding) :
+    class SingleProductViewHolder(private val itemBinding: ItemSingleProductBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
         fun bind(
             product: ProductBanner,
