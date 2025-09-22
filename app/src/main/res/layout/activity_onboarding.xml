@@ -25,7 +25,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:progressMode="true"
-        app:selectedDotColor="@color/orange_dark" />
+        app:selectedDotColor="@color/orange_dark_F55053" />
 
     <Button
         android:id="@+id/btn_get_started"
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:text="Get Started"
         android:textAllCaps="false"
-        android:textColor="@color/orange"
+        android:textColor="@color/orange_F26333"
         android:layout_marginHorizontal="10dp"
         android:layout_marginBottom="30dp"
         android:background="@drawable/rounded_orange_stroke_button"

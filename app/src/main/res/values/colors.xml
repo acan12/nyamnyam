@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">@color/teal_700</color>
-    <color name="colorPrimaryDark">@color/orange</color>
-    <color name="colorAccent">@color/orange</color>
+    <color name="colorPrimaryDark">@color/orange_F26333</color>
+    <color name="colorAccent">@color/orange_F26333</color>
 
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -21,13 +21,14 @@
     <color name="gray_F6F7F8">#F6F7F8</color>
 
     <!--  orange colors  -->
-    <color name="orange">#F26333</color>    
-    <color name="orange_dark">#F55053</color>
+    <color name="orange_F26333">#F26333</color>
+    <color name="orange_dark_F55053">#F55053</color>
 
     <!--  basic colors  -->
     <color name="black_040C22">#040C22</color>
     <color name="black_010F07">#010F07</color>
     <color name="black_363D4E">#363D4E</color>
+    <color name="black_5C616F">#5C616F</color>
     <color name="blue_0BB8E4">#0BB8E4</color>
     <color name="blue_E5F9FE">#E5F9FE</color>
 

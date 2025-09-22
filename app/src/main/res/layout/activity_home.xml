@@ -104,7 +104,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rv_promo_banner"
-                app:spi_dotSelectedColor="@color/orange" />
+                app:spi_dotSelectedColor="@color/orange_F26333" />
 
             <!--  all categories      -->
             <TextView
@@ -127,7 +127,7 @@
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/inter_24pt_bold"
                 android:text="See All"
-                android:textColor="@color/orange"
+                android:textColor="@color/orange_F26333"
                 android:textSize="18sp"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/indicator_of_promo" />
@@ -162,7 +162,7 @@
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/inter_24pt_bold"
                 android:text="See All"
-                android:textColor="@color/orange"
+                android:textColor="@color/orange_F26333"
                 android:textSize="18sp"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rv_product_banner" />

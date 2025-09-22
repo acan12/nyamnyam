@@ -2,13 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginEnd="5dp"
     android:layout_marginBottom="10dp">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -19,8 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            app:cardCornerRadius="15dp"
-            >
+            app:cardCornerRadius="15dp">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -31,57 +30,76 @@
                     android:id="@+id/iv_image_product"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/img_demo_food"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/img_demo_small_product" />
 
                 <TextView
                     android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:fontFamily="@font/inter_24pt_regular"
-                    android:layout_marginTop="12dp"
-                    android:text="Brown Bakery"
                     android:layout_below="@+id/iv_image_product"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/inter_24pt_regular"
+                    android:text="Beef Sandwich"
                     android:textColor="@color/black_040C22"
                     android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/tv_info"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_name"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="4dp"
-                    android:text="Bread, Cake"
-                    android:textColor="@color/gray" />
 
                 <TextView
                     android:id="@+id/tv_star_rating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/iv_image_product"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_marginHorizontal="12dp"
                     android:layout_marginTop="12dp"
-                    android:layout_marginRight="12dp"
                     android:drawableStart="@drawable/ic_star"
                     android:drawablePadding="5dp"
                     android:fontFamily="@font/inter_24pt_regular"
-                    android:layout_alignParentEnd="true"
                     android:text="4.5"
                     android:textColor="@color/black_5C616F"
                     tools:ignore="UseCompatTextViewDrawableXml" />
 
                 <TextView
-                    android:id="@+id/tv_open_hours"
+                    android:id="@+id/tv_time_cook"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_name"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="12dp"
+                    android:drawableStart="@drawable/ic_clock"
+                    android:drawablePadding="5dp"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/inter_24pt_regular"
+                    android:text="15 min"
+                    android:textColor="@color/black_5C616F"
+                    tools:ignore="UseCompatTextViewDrawableXml" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_star_rating"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/inter_24pt_bold"
-                    android:text="Open at 10:00 AM"
-                    android:textColor="@color/blue_0BB8E4" />
+                    android:text="$12"
+                    android:textSize="16sp"
+                    android:textColor="@color/orange_F26333" />
+
+                <TextView
+                    android:id="@+id/tv_original_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_star_rating"
+                    android:layout_toRightOf="@id/tv_price"
+                    android:background="@drawable/strike_through_line"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/inter_24pt_bold"
+                    android:text="$14"
+                    android:textSize="16sp"
+                    android:textColor="@color/gray" />
 
             </RelativeLayout>
 

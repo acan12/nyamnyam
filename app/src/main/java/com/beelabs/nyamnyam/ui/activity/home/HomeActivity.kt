@@ -8,6 +8,8 @@ import com.beelabs.nyamnyam.R
 import com.beelabs.nyamnyam.databinding.ActivityHomeBinding
 import com.beelabs.nyamnyam.ui.adapter.ProductAdapter
 import com.beelabs.nyamnyam.ui.adapter.PromoAdapter
+import com.beelabs.nyamnyam.ui.adapter.SingleProductAdapter
+import com.beelabs.nyamnyam.ui.adapter.SingleSmallProductAdapter
 import com.beelabs.nyamnyam.ui.model.ProductBanner
 import com.beelabs.nyamnyam.ui.model.PromoBanner
 
@@ -91,15 +93,14 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
     private fun setupPopularBanner() {
         val layout = LinearLayoutManager(this)
         layout.orientation = LinearLayoutManager.HORIZONTAL
-
-        val adapter = ProductAdapter(onItemProductOnClick = {
+        val adapter = SingleSmallProductAdapter(onItemProductOnClick = {
 
         })
         adapter.addList(
             listOf(
                 ProductBanner(
                     image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
+                    BitmapFactory.decodeResource(resources, R.drawable.img_demo_food)
                 ),
                 ProductBanner(
                     image =
@@ -122,9 +123,8 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
 
     private fun setupNearbyBanner() {
         val layout = LinearLayoutManager(this)
-        layout.orientation = LinearLayoutManager.HORIZONTAL
 
-        val adapter = ProductAdapter(onItemProductOnClick = {
+        val adapter = SingleProductAdapter(onItemProductOnClick = {
 
         })
         adapter.addList(
