@@ -35,6 +35,17 @@
                     android:adjustViewBounds="true"/>
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="1.2 Km"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="71dp"
+                    android:background="@drawable/rounded_white_solid"
+                    android:paddingHorizontal="7dp"
+                    android:paddingVertical="1dp"/>
+
+                <TextView
                     android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
