@@ -1,7 +1,9 @@
 package com.beelabs.nyamnyam.ui.activity.home
 
+import android.annotation.SuppressLint
 import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import app.coconut2.coconut2_mvvm.base.BaseActivity
 import com.beelabs.nyamnyam.R
@@ -25,6 +27,71 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
         setupProductBanner()
         setupPopularBanner()
         setupNearbyBanner()
+
+        setupMenuButtons()
+    }
+
+    @SuppressLint("UseCompatLoadingForDrawables")
+    private fun setupMenuButtons() {
+        binding.apply {
+            menuHome.setOnClickListener {
+                menuHome.setImageResource(R.drawable.img_menu_home_selected)
+                clearOtherMenuInActive(it)
+            }
+            menuSearch.setOnClickListener {
+                menuSearch.setImageResource(R.drawable.img_menu_search_selected)
+                clearOtherMenuInActive(it)
+            }
+            menuOrder.setOnClickListener {
+                menuOrder.setImageResource(R.drawable.img_menu_order_selected)
+                clearOtherMenuInActive(it)
+            }
+            menuUpdates.setOnClickListener {
+                menuUpdates.setImageResource(R.drawable.img_menu_update_selected)
+                clearOtherMenuInActive(it)
+            }
+            menuProfile.setOnClickListener {
+                menuProfile.setImageResource(R.drawable.img_menu_profile_selected)
+                clearOtherMenuInActive(it)
+            }
+        }
+    }
+
+    private fun clearOtherMenuInActive(menu: View?) {
+        binding.apply {
+            when (menu) {
+                menuHome -> {
+                    menuSearch.setImageResource(R.drawable.img_menu_search)
+                    menuOrder.setImageResource(R.drawable.img_menu_order)
+                    menuUpdates.setImageResource(R.drawable.img_menu_update)
+                    menuProfile.setImageResource(R.drawable.img_menu_profile)
+                }
+                menuSearch -> {
+                    menuHome.setImageResource(R.drawable.img_menu_home)
+                    menuOrder.setImageResource(R.drawable.img_menu_order)
+                    menuUpdates.setImageResource(R.drawable.img_menu_update)
+                    menuProfile.setImageResource(R.drawable.img_menu_profile)
+                }
+                menuOrder -> {
+                    menuHome.setImageResource(R.drawable.img_menu_home)
+                    menuSearch.setImageResource(R.drawable.img_menu_search)
+                    menuUpdates.setImageResource(R.drawable.img_menu_update)
+                    menuProfile.setImageResource(R.drawable.img_menu_profile)
+                }
+                menuUpdates -> {
+                    menuHome.setImageResource(R.drawable.img_menu_home)
+                    menuSearch.setImageResource(R.drawable.img_menu_search)
+                    menuOrder.setImageResource(R.drawable.img_menu_order)
+                    menuProfile.setImageResource(R.drawable.img_menu_profile)
+                }
+                menuProfile -> {
+                    menuHome.setImageResource(R.drawable.img_menu_home)
+                    menuSearch.setImageResource(R.drawable.img_menu_search)
+                    menuOrder.setImageResource(R.drawable.img_menu_order)
+                    menuUpdates.setImageResource(R.drawable.img_menu_update)
+                }
+            }
+        }
     }
 
     private fun setupPromoBanner() {

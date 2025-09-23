@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke
+        android:width=".5dp"
+        android:color="@color/gray_868686" /> <!-- Example: black stroke with 2dp width -->
+
+    <corners
+        android:topLeftRadius="20dp"
+        android:topRightRadius="20dp"
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="0dp" />
+    <solid android:color="@color/color_white" /> <!-- Replace with your desired background color -->
+</shape>

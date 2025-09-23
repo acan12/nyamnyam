@@ -206,16 +206,9 @@
         android:id="@+id/menu_bottom_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/top_rounded_white_solid"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent">
-
-        <View
-            android:id="@+id/separator_line"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/gray"
-            app:layout_constraintLeft_toLeftOf="parent"
-            tools:ignore="MissingConstraints" />
 
         <ImageView
             android:id="@+id/menu_order"
@@ -234,7 +227,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginHorizontal="22dp"
             app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/img_menu_home"
+            android:src="@drawable/img_menu_home_selected"
             android:paddingVertical="17dp" />
 
         <ImageView
