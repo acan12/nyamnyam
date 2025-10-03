@@ -10,7 +10,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
         get() = FragmentProfileBinding::inflate
 
     override fun setup() {
-        TODO("Not yet implemented")
+
     }
 
 }

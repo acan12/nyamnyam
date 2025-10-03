@@ -3,6 +3,7 @@
     <color name="colorPrimary">@color/teal_700</color>
     <color name="colorPrimaryDark">@color/orange_F26333</color>
     <color name="colorAccent">@color/orange_F26333</color>
+    <color name="colorStaturBar">@color/color_white</color>
 
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -11,7 +12,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
 
     <!--  gray colors  -->
     <color name="gray">#A7AAB2</color>

@@ -1,21 +1,27 @@
 package com.beelabs.nyamnyam.ui.activity.home
 
 import android.annotation.SuppressLint
-import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.View
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.activity.viewModels
+import androidx.fragment.app.Fragment
 import app.coconut2.coconut2_mvvm.base.BaseActivity
 import com.beelabs.nyamnyam.R
+import com.beelabs.nyamnyam.core.util.FragmentUtil
+import com.beelabs.nyamnyam.core.util.FragmentUtil.showFragment
 import com.beelabs.nyamnyam.databinding.ActivityHomeBinding
-import com.beelabs.nyamnyam.ui.adapter.ProductAdapter
-import com.beelabs.nyamnyam.ui.adapter.PromoAdapter
-import com.beelabs.nyamnyam.ui.adapter.SingleProductAdapter
-import com.beelabs.nyamnyam.ui.adapter.SingleSmallProductAdapter
-import com.beelabs.nyamnyam.ui.model.ProductBanner
-import com.beelabs.nyamnyam.ui.model.PromoBanner
+import com.beelabs.nyamnyam.ui.activity.home.fragment.HomeFragment
+import com.beelabs.nyamnyam.ui.activity.home.fragment.OrderFragment
+import com.beelabs.nyamnyam.ui.activity.home.fragment.ProfileFragment
+import com.beelabs.nyamnyam.ui.activity.home.fragment.SearchFragment
+import com.beelabs.nyamnyam.ui.activity.home.fragment.UpdatesFragment
+import com.beelabs.nyamnyam.ui.activity.home.vm.HomeViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeActivity : BaseActivity<ActivityHomeBinding>() {
+    private val viewModel by viewModels<HomeViewModel>()
+
     override fun inflateBinding() =
         ActivityHomeBinding.inflate(layoutInflater)
 
@@ -23,34 +29,36 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        setupPromoBanner()
-        setupProductBanner()
-        setupPopularBanner()
-        setupNearbyBanner()
-
         setupMenuButtons()
+
+        showFragment(HomeFragment(), supportFragmentManager)
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
     private fun setupMenuButtons() {
         binding.apply {
             menuHome.setOnClickListener {
+                showFragment(HomeFragment(), supportFragmentManager)
                 menuHome.setImageResource(R.drawable.img_menu_home_selected)
                 clearOtherMenuInActive(it)
             }
             menuSearch.setOnClickListener {
+                showFragment(SearchFragment(), supportFragmentManager)
                 menuSearch.setImageResource(R.drawable.img_menu_search_selected)
                 clearOtherMenuInActive(it)
             }
             menuOrder.setOnClickListener {
+                showFragment(OrderFragment(), supportFragmentManager)
                 menuOrder.setImageResource(R.drawable.img_menu_order_selected)
                 clearOtherMenuInActive(it)
             }
             menuUpdates.setOnClickListener {
+                showFragment(UpdatesFragment(), supportFragmentManager)
                 menuUpdates.setImageResource(R.drawable.img_menu_update_selected)
                 clearOtherMenuInActive(it)
             }
             menuProfile.setOnClickListener {
+                showFragment(ProfileFragment(), supportFragmentManager)
                 menuProfile.setImageResource(R.drawable.img_menu_profile_selected)
                 clearOtherMenuInActive(it)
             }
@@ -92,130 +100,5 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
                 }
             }
         }
-    }
-
-    private fun setupPromoBanner() {
-        val layout = LinearLayoutManager(this)
-        layout.orientation = LinearLayoutManager.HORIZONTAL
-
-        val adapter = PromoAdapter(onItemPromoOnClick = { promo ->
-
-        })
-        adapter.addList(
-            listOf(
-                PromoBanner(
-                    image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_banner_pasta)
-                ),
-                PromoBanner(
-                    image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_banner_pasta)
-                ),
-                PromoBanner(
-                    image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_banner_pasta)
-                )
-            )
-        )
-
-        binding.rvPromoBanner.layoutManager = layout
-        binding.rvPromoBanner.adapter = adapter
-
-        val indicator = binding.indicatorOfPromo
-        indicator.attachToRecyclerView(binding.rvPromoBanner)
-    }
-
-    private fun setupProductBanner() {
-        val layout = LinearLayoutManager(this)
-        layout.orientation = LinearLayoutManager.HORIZONTAL
-
-        val adapter = ProductAdapter(onItemProductOnClick = {
-
-        })
-        adapter.addList(
-            listOf(
-                ProductBanner(
-                    image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
-                ),
-                ProductBanner(
-                    image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
-                ),
-                ProductBanner(
-                    image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
-                ),
-                ProductBanner(
-                    image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
-                ),
-            )
-        )
-
-        binding.rvProductBanner.layoutManager = layout
-        binding.rvProductBanner.adapter = adapter
-    }
-
-    private fun setupPopularBanner() {
-        val layout = LinearLayoutManager(this)
-        layout.orientation = LinearLayoutManager.HORIZONTAL
-        val adapter = SingleSmallProductAdapter(onItemProductOnClick = {
-
-        })
-        adapter.addList(
-            listOf(
-                ProductBanner(
-                    image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_demo_food)
-                ),
-                ProductBanner(
-                    image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
-                ),
-                ProductBanner(
-                    image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
-                ),
-                ProductBanner(
-                    image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
-                ),
-            )
-        )
-
-        binding.rvPopularBanner.layoutManager = layout
-        binding.rvPopularBanner.adapter = adapter
-    }
-
-    private fun setupNearbyBanner() {
-        val layout = LinearLayoutManager(this)
-
-        val adapter = SingleProductAdapter(onItemProductOnClick = {
-
-        })
-        adapter.addList(
-            listOf(
-                ProductBanner(
-                    image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
-                ),
-                ProductBanner(
-                    image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
-                ),
-                ProductBanner(
-                    image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
-                ),
-                ProductBanner(
-                    image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
-                ),
-            )
-        )
-
-        binding.rvNearbyBanner.layoutManager = layout
-        binding.rvNearbyBanner.adapter = adapter
     }
 }

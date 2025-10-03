@@ -10,6 +10,6 @@ class UpdatesFragment : BaseFragment<FragmentUpdatesBinding>() {
         get() = FragmentUpdatesBinding::inflate
 
     override fun setup() {
-        TODO("Not yet implemented")
+
     }
 }

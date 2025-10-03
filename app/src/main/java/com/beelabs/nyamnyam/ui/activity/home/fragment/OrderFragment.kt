@@ -10,6 +10,6 @@ class OrderFragment : BaseFragment<FragmentOrderBinding>() {
         get() = FragmentOrderBinding::inflate
 
     override fun setup() {
-        TODO("Not yet implemented")
+
     }
 }

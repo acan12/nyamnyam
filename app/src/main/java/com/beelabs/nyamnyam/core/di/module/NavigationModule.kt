@@ -3,6 +3,7 @@ package com.beelabs.nyamnyam.core.di.module
 import app.coconut2.coconut2_mvvm.network.ApiManager
 import com.beelabs.nyamnyam.data.sources.remote.Api
 import com.beelabs.nyamnyam.ui.navigation.auth.AuthNavigation
+import com.beelabs.nyamnyam.ui.navigation.home.HomeNavigation
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,5 +15,9 @@ import javax.inject.Singleton
 object NavigationModule {
     @Provides
     @Singleton
-    fun provideNavigation(): AuthNavigation = AuthNavigation()
+    fun provideAuthNavigation(): AuthNavigation = AuthNavigation()
+
+    @Provides
+    @Singleton
+    fun provideHomeNavigation(): HomeNavigation = HomeNavigation()
 }

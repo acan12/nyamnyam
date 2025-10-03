@@ -10,7 +10,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
         get() = FragmentSearchBinding::inflate
 
     override fun setup() {
-        TODO("Not yet implemented")
+
     }
 
 }
