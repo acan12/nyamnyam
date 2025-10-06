@@ -3,7 +3,6 @@
     <stroke
         android:width=".5dp"
         android:color="@color/gray_868686" /> <!-- Example: black stroke with 2dp width -->
-
     <corners
         android:topLeftRadius="20dp"
         android:topRightRadius="20dp"
