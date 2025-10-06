@@ -127,7 +127,7 @@ dependencies {
     // image rendering
     implementation(libs.glide)
     implementation(libs.scrollingPageIndicator)
-
+    implementation(libs.lottie)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
