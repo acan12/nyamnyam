@@ -128,6 +128,7 @@ dependencies {
     implementation(libs.glide)
     implementation(libs.scrollingPageIndicator)
     implementation(libs.lottie)
+    implementation(libs.shimmer)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
