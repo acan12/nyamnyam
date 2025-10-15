@@ -13,22 +13,25 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!--  gray colors  -->
+    <!--  gray  -->
     <color name="gray">#A7AAB2</color>
     <color name="gray_868686">#868686</color>
     <color name="gray_003D8F">#DEE3E7</color>
     <color name="gray_E8EBEE">#E8EBEE</color>
     <color name="gray_F6F7F8">#F6F7F8</color>
+    <color name="gray_CDD4DB">#CDD4DB</color>
 
-    <!--  orange colors  -->
+    <!--  orange  -->
     <color name="orange_F26333">#F26333</color>
     <color name="orange_dark_F55053">#F55053</color>
 
-    <!--  basic colors  -->
+    <!--  black  -->
     <color name="black_040C22">#040C22</color>
     <color name="black_010F07">#010F07</color>
     <color name="black_363D4E">#363D4E</color>
     <color name="black_5C616F">#5C616F</color>
+
+    <!--  blue  -->
     <color name="blue_0BB8E4">#0BB8E4</color>
     <color name="blue_E5F9FE">#E5F9FE</color>
 

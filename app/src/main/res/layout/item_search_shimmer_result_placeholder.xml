@@ -1,36 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp">
+    app:cardCornerRadius="@dimen/dimen10sp"
+    android:layout_margin="20dp">
 
     <LinearLayout
-        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <ImageView
-            android:id="@+id/iv_news"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="#ddd"/>
+        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tv_title"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:height="20dp"
-            android:background="@color/gray"/>
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/tv_content"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/gray"/>
+            <ImageView
+                android:id="@+id/iv_news"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@color/gray_CDD4DB"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="64dp"
+                android:layout_height="22dp"
+                app:layout_constraintLeft_toRightOf="@id/iv_news"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="10dp"
+                android:background="@color/gray_CDD4DB"/>
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="22dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="10dp"
+                android:background="@color/gray_CDD4DB"/>
+
+            <TextView
+                android:id="@+id/tv_middle"
+                android:layout_width="250dp"
+                android:layout_height="25dp"
+                app:layout_constraintLeft_toRightOf="@id/iv_news"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                android:layout_margin="10dp"
+                android:background="@color/gray_CDD4DB"/>
+
+            <TextView
+                android:id="@+id/tv_footer"
+                android:layout_width="100dp"
+                android:layout_height="18dp"
+                app:layout_constraintLeft_toRightOf="@id/iv_news"
+                app:layout_constraintTop_toBottomOf="@id/tv_middle"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@color/gray_CDD4DB"/>
+
+            <TextView
+                android:layout_width="58dp"
+                android:layout_height="18dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_middle"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@color/gray_CDD4DB"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
