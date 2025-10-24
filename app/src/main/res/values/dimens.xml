@@ -6,4 +6,5 @@
 
     <!--  dotpixel dp -->
     <dimen name="dimen10dp">10dp</dimen>
+    <dimen name="dimen_status_bar_height_android16">40dp</dimen>
 </resources>

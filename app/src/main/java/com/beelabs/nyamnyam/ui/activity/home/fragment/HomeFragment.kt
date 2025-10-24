@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import app.coconut2.coconut2_mvvm.base.BaseFragment
 import com.beelabs.nyamnyam.R
+import com.beelabs.nyamnyam.core.util.ViewUtil
 import com.beelabs.nyamnyam.databinding.FragmentHomeBinding
 import com.beelabs.nyamnyam.ui.adapter.ProductAdapter
 import com.beelabs.nyamnyam.ui.adapter.PromoAdapter
@@ -21,6 +22,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         get() = FragmentHomeBinding::inflate
 
     override fun setup() {
+        ViewUtil.enableEdgeToEdgeApp(binding.root, requireActivity())
         setupPromoBanner()
         setupProductBanner()
         setupPopularBanner()

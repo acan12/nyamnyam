@@ -6,6 +6,7 @@ import androidx.core.view.isVisible
 import androidx.core.widget.doOnTextChanged
 import app.coconut2.coconut2_mvvm.base.BaseFragment
 import com.beelabs.nyamnyam.R
+import com.beelabs.nyamnyam.core.util.ViewUtil
 import com.beelabs.nyamnyam.databinding.FragmentSearchBinding
 
 class SearchFragment : BaseFragment<FragmentSearchBinding>() {
@@ -13,6 +14,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
         get() = FragmentSearchBinding::inflate
 
     override fun setup() {
+        ViewUtil.enableEdgeToEdgeApp(binding.root, requireActivity())
         binding.shimmerSearchResult.startShimmer()
         binding.etInputSearch.apply {
             setOnFocusChangeListener { view, b ->
