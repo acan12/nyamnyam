@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
+import androidx.core.view.WindowCompat
 import androidx.fragment.app.Fragment
 import app.coconut2.coconut2_mvvm.base.BaseActivity
 import com.beelabs.nyamnyam.R
@@ -28,7 +29,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
+        WindowCompat.requ(window)
         setupMenuButtons()
 
         showFragment(HomeFragment(), supportFragmentManager)

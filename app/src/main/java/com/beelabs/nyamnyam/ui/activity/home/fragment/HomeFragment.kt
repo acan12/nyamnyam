@@ -22,7 +22,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         get() = FragmentHomeBinding::inflate
 
     override fun setup() {
-        ViewUtil.enableEdgeToEdgeApp(binding.root, requireActivity())
+        ViewUtil.enableEdgeToEdgeApp(binding.root)
         setupPromoBanner()
         setupProductBanner()
         setupPopularBanner()

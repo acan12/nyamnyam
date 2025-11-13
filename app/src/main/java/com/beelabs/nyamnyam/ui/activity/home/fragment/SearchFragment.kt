@@ -14,7 +14,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
         get() = FragmentSearchBinding::inflate
 
     override fun setup() {
-        ViewUtil.enableEdgeToEdgeApp(binding.root, requireActivity())
+        ViewUtil.enableEdgeToEdgeApp(binding.root)
         binding.shimmerSearchResult.startShimmer()
         binding.etInputSearch.apply {
             setOnFocusChangeListener { view, b ->

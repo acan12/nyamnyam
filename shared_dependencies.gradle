@@ -1,0 +1,106 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    namespace = "com.beelabs.nyamnyam"
+    compileSdk = 36
+
+    defaultConfig {
+        applicationId = "com.beelabs.nyamnyam"
+        minSdk = 27
+        //noinspection EditedTargetSdkVersion
+        targetSdk = 36
+        versionCode = 1
+        versionName = "1.0.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary = true
+        }
+
+        ext.set("ANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES", "ON")
+    }
+
+    flavorDimensions "environment"
+    productFlavors {
+        staging {
+            dimension "environment"
+            resValue "string", "app_name", "App staging"
+        }
+        uat {
+            dimension "environment"
+            resValue "string", "app_name", "App uat"
+        }
+        production {
+            dimension "environment"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+    buildToolsVersion = "34.0.0"
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+
+
+
+    android {
+
+
+        buildTypes {
+            release {
+                isMinifyEnabled = true
+                proguardFiles(
+                        getDefaultProguardFile("proguard-android-optimize.txt"),
+                        "proguard-rules.pro"
+                )
+            }
+            getByName("debug") {
+                applicationIdSuffix = ".debug"
+                isDebuggable = true
+            }
+        }
+        flavorDimensions += "version"
+        productFlavors {
+            create("staging") {
+                // Assigns this product flavor to the "version" flavor dimension.
+                // If you are using only one dimension, this property is optional,
+                // and the plugin automatically assigns all the module's flavors to
+                // that dimension.
+                dimension = "version"
+                applicationIdSuffix = ".staging"
+                versionNameSuffix = "-staging"
+            }
+            create("uat") {
+                dimension = "version"
+                applicationIdSuffix = ".uat"
+                versionNameSuffix = "-uat"
+            }
+            create("prod") {
+                dimension = "version"
+            }
+        }
+
+
+    }
+}
+
