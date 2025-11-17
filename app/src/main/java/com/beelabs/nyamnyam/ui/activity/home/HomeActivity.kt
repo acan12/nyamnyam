@@ -4,11 +4,8 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
-import androidx.core.view.WindowCompat
-import androidx.fragment.app.Fragment
 import app.coconut2.coconut2_mvvm.base.BaseActivity
 import com.beelabs.nyamnyam.R
-import com.beelabs.nyamnyam.core.util.FragmentUtil
 import com.beelabs.nyamnyam.core.util.FragmentUtil.showFragment
 import com.beelabs.nyamnyam.databinding.ActivityHomeBinding
 import com.beelabs.nyamnyam.ui.activity.home.fragment.HomeFragment
