@@ -25,7 +25,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "NyamNyam"
 include(":app")
-include(":feature:auth")
-include(":feature:home")
-include(":core:util")
-include(":core:widget")

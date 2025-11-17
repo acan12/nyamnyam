@@ -29,7 +29,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        WindowCompat.requ(window)
+
         setupMenuButtons()
 
         showFragment(HomeFragment(), supportFragmentManager)
