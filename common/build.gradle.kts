@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "app.nyamnyam.payment"
+    namespace = "app.common"
     compileSdk = 36
 
     defaultConfig {
@@ -51,7 +51,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":common"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

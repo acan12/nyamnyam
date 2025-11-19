@@ -25,7 +25,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "NyamNyam"
 include(":app")
-include(":feature:core")
+include(":common")
 include(":feature:auth")
 include(":feature:order")
 include(":feature:payment")
+
