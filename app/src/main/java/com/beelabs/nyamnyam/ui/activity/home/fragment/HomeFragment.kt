@@ -139,10 +139,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                     image =
                     BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
                 ),
-                ProductBanner(
-                    image =
-                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
-                ),
+//                ProductBanner(
+//                    image =
+//                    BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)
+//                ),
                 ProductBanner(
                     image =
                     BitmapFactory.decodeResource(resources, R.drawable.img_breakfast)

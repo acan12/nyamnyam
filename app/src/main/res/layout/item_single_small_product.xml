@@ -18,7 +18,8 @@
             android:id="@+id/card_product"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginVertical="@dimen/dimen5dp"
+            android:layout_marginEnd="@dimen/dimen10dp"
             app:cardCornerRadius="15dp">
 
             <RelativeLayout

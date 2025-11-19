@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="dimen5sp">5sp</dimen>
     <dimen name="dimen10sp">10sp</dimen>
     <dimen name="dimen20sp">20sp</dimen>
     <dimen name="dimen25sp">25sp</dimen>
 
     <!--  dotpixel dp -->
+    <dimen name="dimen5dp">5dp</dimen>
     <dimen name="dimen10dp">10dp</dimen>
     <dimen name="dimen_status_bar_height_android16">40dp</dimen>
 </resources>
