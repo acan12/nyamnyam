@@ -1,13 +1,17 @@
 package com.beelabs.nyamnyam.ui.activity.splash
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.beelabs.nyamnyam.databinding.ActivitySplashBinding
 import com.beelabs.nyamnyam.ui.activity.onboard.OnBoardingActivity
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
+@SuppressLint("CustomSplashScreen")
 @AndroidEntryPoint
 class SplashActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding
@@ -17,11 +21,11 @@ class SplashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Handler().postDelayed({
+        lifecycleScope.launch {
+            delay(5000)
             val intent = Intent(this@SplashActivity, OnBoardingActivity::class.java )
             startActivity(intent)
             finish()
-
-        }, 5000)
+        }
     }
 }
