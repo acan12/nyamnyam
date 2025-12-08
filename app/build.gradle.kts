@@ -120,7 +120,6 @@ dependencies {
     implementation(libs.okhttp.logging)
     // retrofit
     implementation(libs.retrofit)
-    implementation(libs.retrofit)
     implementation(libs.retrofit.converter.jackson)
     implementation(libs.retrofit.adapter.rxjava3)
     // viewmodel livedata

@@ -40,9 +40,29 @@ android {
 
 dependencies {
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
     implementation(libs.material)
+    implementation(libs.androidx.core.ktx)
+
+    // core
+    implementation(libs.coconut2)
+    implementation(libs.rx.android3)
+
+    // retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.jackson)
+    implementation(libs.retrofit.adapter.rxjava3)
+
+    // okhttp
+    implementation(platform(libs.okhttp.bom))
+    implementation(libs.okhttp.logging)
+    implementation(libs.okhttp)
+
+    // room sqlite db
+    implementation(libs.room.ktx)
+    implementation(libs.room.runtime)
+    ksp(libs.room.compiler)
+
+    // unit test
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
